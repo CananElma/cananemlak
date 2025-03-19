@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cananemlak/static/css/main.d036a42e.css",
+    "main.js": "/cananemlak/static/js/main.d37d7f29.js",
+    "static/js/453.c9b4a86f.chunk.js": "/cananemlak/static/js/453.c9b4a86f.chunk.js",
+    "index.html": "/cananemlak/index.html",
+    "main.d036a42e.css.map": "/cananemlak/static/css/main.d036a42e.css.map",
+    "main.d37d7f29.js.map": "/cananemlak/static/js/main.d37d7f29.js.map",
+    "453.c9b4a86f.chunk.js.map": "/cananemlak/static/js/453.c9b4a86f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d036a42e.css",
+    "static/js/main.d37d7f29.js"
+  ]
+}
