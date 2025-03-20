@@ -87,37 +87,36 @@ const theme = {
   },
 };
 
-// Bildirim verileri
-const notificationData = [
+const notifications = [
   {
     id: 1,
-    type: 'warning',
-    message: '🔔 ÖNEMLİ: Yurtdışındaki Türk kullanıcılarımız için özel portföy hazırlanıyor!',
+    type: 'info',
+    message: '🔍 AI Tarama: Yurtdışında emlak arayan Türk vatandaşları sosyal medya ve emlak platformlarında tespit ediliyor...',
     time: 'Şimdi'
   },
   {
     id: 2,
     type: 'success',
-    message: '🌟 Son 24 saatte Almanya\'dan 458 Türk ziyaretçi platformumuzu ziyaret etti!',
-    time: '2 dakika önce'
+    message: '✉️ Hollanda\'daki 12 yeni mülk için satıcılara otomatik iletişim e-postaları gönderildi.',
+    time: '2 dk önce'
   },
   {
     id: 3,
-    type: 'info',
-    message: '📈 Hollanda\'daki Türk yatırımcılardan gelen taleplerde %32 artış!',
-    time: '15 dakika önce'
+    type: 'warning',
+    message: '🎯 Yapay Zeka Tespiti: Almanya\'da 85 Türk vatandaşı aktif olarak kiralık-satılık mülk arıyor.',
+    time: '5 dk önce'
   },
   {
     id: 4,
-    type: 'success',
-    message: '🏆 Dubai\'de yaşayan Türk yatırımcılar için özel portföy hizmeti başladı!',
-    time: '1 saat önce'
+    type: 'info',
+    message: '📱 Sosyal Medya Analizi: İngiltere\'de yaşayan 120+ Türk, öğrenci evi ve yatırımlık daire arayışında.',
+    time: '10 dk önce'
   },
   {
     id: 5,
-    type: 'warning',
-    message: '📢 15 farklı ülkede yaşayan Türk vatandaşlarına emlak danışmanlığı hizmeti veriyoruz!',
-    time: '2 saat önce'
+    type: 'success',
+    message: '🤖 AI Raporu: Dubai\'de lüks konut arayan 45 Türk yatırımcı ile otomatik iletişim başlatıldı.',
+    time: '15 dk önce'
   }
 ];
 
@@ -141,12 +140,12 @@ function App() {
     let currentIndex = 0;
     
     // İlk bildirimi hemen göster
-    setActiveNotification(notificationData[0]);
+    setActiveNotification(notifications[0]);
 
     // Her 5 saniyede bir sonraki bildirime geç
     const interval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % notificationData.length;
-      setActiveNotification(notificationData[currentIndex]);
+      currentIndex = (currentIndex + 1) % notifications.length;
+      setActiveNotification(notifications[currentIndex]);
     }, 5000);
 
     return () => clearInterval(interval);
