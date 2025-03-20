@@ -4,14 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+console.log('index.js yükleniyor...');
+
+// React root element kontrolü
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  console.error('Root element bulunamadı!');
+} else {
+  console.log('Root element bulundu, React mount ediliyor');
+}
+
+const root = ReactDOM.createRoot(rootElement);
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <App />
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Performans ölçümleri
+reportWebVitals(console.log);
+
+window.addEventListener('error', function(e) {
+  console.error('Global hata yakalandı:', e.message);
+});
